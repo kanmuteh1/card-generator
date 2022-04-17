@@ -1,0 +1,25 @@
+{
+  "name": "card-generator",
+  "version": "1.0.0",
+  "description": "Cards Generator It is a fun weekend project that was inspired by @kanmuteh1's willingness to strive for mastery whilst keeping the standards high. I do encourage others who want to brush up on their skills to give this a try.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanmuteh1/card-generator.git"
+  },
+  "author": "Kanmteh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanmuteh1/card-generator/issues"
+  },
+  "homepage": "https://github.com/kanmuteh1/card-generator#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-fileupload": "^1.3.1",
+    "nodemon": "^2.0.15"
+  }
+}

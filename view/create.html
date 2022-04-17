@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/">FIXCARD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="card-info">
+        <form method="POST" action="/card/create" enctype="multipart/form-data">
+            <br><br>
+            <input type="file" name="img">
+            <br><br>
+            <input type="text" placeholder="John Brown" name="name">
+            <br><br>
+            <input type="text" placeholder="Company" name="company-name">
+            <br><br>
+            <input type="text" placeholder="Occupation" name="job-title">
+            <br><br>
+            <input type="date" placeholder="Date of birth" name="dob">
+            <br><br>
+            <input type="submit" onclick="getCards()">          
+        </form> 
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="/css/form.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Create a new card</h1>
+        <p>A morden and more save way to creat your students cards.</p>
+        <div class="btn-group">
+          <a class="btn-item" href="/">Home</a>
+        </div>
+      </div>
+      <form method="POST" action="/card/create" enctype="multipart/form-data">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Create Your Card</h2>
+        </div>
+        <div class="info">
+            <input type="file" name="img">
+            <input type="text" placeholder="John Brown" name="name">
+            <input type="text" placeholder="Company" name="company-name">
+            <input type="text" placeholder="Occupation" name="job-title">
+            <input type="date" placeholder="Date of birth" name="dob" style="color: white;">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

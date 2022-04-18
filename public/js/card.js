@@ -6,7 +6,6 @@ function getCard(){
     fetch(`/card/${ID}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         let card = `<div class="col" id="user-profile">
                         <div class="name">
                             <!-- Product image-->
@@ -22,7 +21,7 @@ function getCard(){
                             
                             <div class="call-to-action">
                                 <a class="btn" href="/card/delete/${data.id_no}">Delete</a>
-                                <a class="btn" href="/card/edit/${data.id_no}">Edit</a>
+                                <a class="btn" href="/edit/view/${data.id_no}">Edit</a>
                             </div>
                         </div>
                     </div>`

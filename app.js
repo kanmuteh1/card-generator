@@ -34,6 +34,11 @@ app.get('/create', (req, res) => {
   res.sendFile(path.join(__dirname +'/view/create.html'));
 })
 
+
+app.get('/edit/view/:id', (req, res) => {
+  res.sendFile(path.join(__dirname +'/view/edit.html'));
+})
+
 app.get('/single/:id', (req, res) => {
   res.sendFile(path.join(__dirname +'/view/card.html'));
 })
@@ -106,10 +111,49 @@ app.get('/card/delete/:id', (req, res) => {
       if(ele.id_no === Number(ID)){
         json.cards.splice(index,1);
         fs.writeFile('data.json', JSON.stringify(json), function (err) {
-          if (err) throw err;
+          res.redirect("/");
         });
+      }
+    })
+  })
+})
 
-        res.redirect("/");
+app.post('/card/edit/:id', (req, res) => {
+  id = Number(req.params.id);
+  full_name = req.body.name;
+  occupation = req.body['job-title'];
+  company = req.body['company-name'];
+  date_of_birth = req.body.dob;
+
+  // // storing of image
+  const file = req.files.img;
+  const path = __dirname + "/public/images/" + file.name;
+
+  info = {
+    id_no: id,
+    name: full_name,
+    company_name: company,
+    job_title: occupation,
+    dob: date_of_birth,
+    img_url: file.name,
+    created_at: Date.now(),
+    updated_at: Date.now()
+  }
+
+  file.mv(path, (err) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+  });
+  
+  fs.readFile('data.json', function (err, data) {
+    let json = JSON.parse(data)
+    json.cards.forEach((ele,index)=>{
+      if(ele.id_no === id){
+        json.cards.splice(index,1,info);
+        fs.writeFile('data.json', JSON.stringify(json), function (err) {
+          res.redirect("/");
+        });
       }
     })
   })

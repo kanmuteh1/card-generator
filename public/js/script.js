@@ -1,4 +1,3 @@
-
 function getCards(){
     let card_area = document.getElementById('cards-area');
     fetch('/cards')
@@ -28,7 +27,6 @@ function getCards(){
                             </div>
                         </div>`
             card_area.insertAdjacentHTML('beforeend', card)
-
         });
     });
 }

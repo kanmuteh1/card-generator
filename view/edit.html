@@ -5,12 +5,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="/css/form.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <style>
-
-    </style>
   </head>
   <body>
-    <div class="main-block">
+    <div class="main-block" id="form">
       <div class="left-part">
         <i class="fas fa-graduation-cap"></i>
         <h1>Create a new card</h1>
@@ -19,20 +16,8 @@
           <a class="btn-item" href="/">Home</a>
         </div>
       </div>
-      <form method="POST" action="/card/create" enctype="multipart/form-data">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i> 
-          <h2>Create Your Card</h2>
-        </div>
-        <div class="info">
-            <input type="file" name="img">
-            <input type="text" placeholder="John Brown" name="name">
-            <input type="text" placeholder="Company" name="company-name">
-            <input type="text" placeholder="Occupation" name="job-title">
-            <input type="date" placeholder="Date of birth" name="dob" style="color: white;">
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      <!-- form -->
     </div>
+    <script src="/js/form.js"></script>
   </body>
 </html>
